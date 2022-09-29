@@ -1,7 +1,8 @@
 import time
-k = 7
+k = 4
 A = []
 ans = []
+
 
 def find_low_index(a, arr):
     l = len(arr) - 1
@@ -11,7 +12,7 @@ def find_low_index(a, arr):
         return -1
     if a < arr[0]:
         return 0
-    while s<=l:
+    while s <= l:
         mid = (s + l)//2
         if arr[mid] == a:
             return mid
@@ -21,6 +22,7 @@ def find_low_index(a, arr):
         else:
             s = mid + 1
     return res
+
 
 def find_high_index(a, arr):
     l = len(arr) - 1
@@ -76,7 +78,7 @@ def incoming():
         print("exist")
     else:
         p = int(p)
-        print("Triplets with equi-diastance of ", k , " are : ")
+        print("Triplets with equi-diastance of ", k, " are : ")
         solve(p)
         print(ans)
         A.append(p)
