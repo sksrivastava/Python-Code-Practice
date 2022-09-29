@@ -3,6 +3,7 @@ k = 7
 A = []
 ans = []
 
+
 def find_low_index(a, arr=A):
     l = len(arr) - 1
     s = 0
@@ -22,6 +23,7 @@ def find_low_index(a, arr=A):
             s = mid + 1
     return res
 
+
 def find_high_index(a, arr=A):
     l = len(arr) - 1
     s = 0
@@ -40,6 +42,7 @@ def find_high_index(a, arr=A):
             s = mid + 1
             res = mid
     return res
+
 
 def solve(p):
     n = len(A)
@@ -79,6 +82,7 @@ def incoming():
         A.sort()
         print(A)
         incoming()
+
 
 begin = time.time()
 incoming()
